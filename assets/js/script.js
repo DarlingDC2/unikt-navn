@@ -1,4 +1,17 @@
 // start screen with a button to begin and button to view hs
+var startScreen = document.querySelector ("#js-start-screen")
+var startButton = document.querySelector ("#js-start-button")
+startButton.addEventListener("click", function() {
+    startScreen.style.visibility = "hidden";
+    quizScreen.style.visibility =  "visible";
+})
+
+
+var quizScreen = document.querySelector ("#js-quiz-screen")
+quizScreen.style.visibility =  "hidden";
+var questionText = document.querySelector ("#js-question-text")
+var questionChoices = document.querySelector ("#js-choices")
+
 // when start button is pressed question 1 appears with four buttons 
 // 3 out of 4 buttons will return false
 // 1 will return true
@@ -13,3 +26,4 @@
 // remove view highscores button and timer on hs screen
 // save initials and score(time) to local 
 // order initials by highest score to lowest
+
