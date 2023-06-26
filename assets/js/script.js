@@ -6,11 +6,19 @@ startButton.addEventListener("click", function() {
     quizScreen.style.visibility =  "visible";
 })
 
-
 var quizScreen = document.querySelector ("#js-quiz-screen")
 quizScreen.style.visibility =  "hidden";
 var questionText = document.querySelector ("#js-question-text")
 var questionChoices = document.querySelector ("#js-choices")
+questionChoices.addEventListener("click", function(){
+    console.log("answer")
+ })
+
+
+
+
+var questionText = document.querySelector ("#js-question-text")
+
 
 // when start button is pressed question 1 appears with four buttons 
 // 3 out of 4 buttons will return false
