@@ -1,23 +1,38 @@
 // start screen with a button to begin and button to view hs
-var startScreen = document.querySelector ("#js-start-screen")
-var startButton = document.querySelector ("#js-start-button")
+var startScreen = document.querySelector ("#js-start-screen");
+var startButton = document.querySelector ("#js-start-button");
 startButton.addEventListener("click", function() {
     startScreen.style.visibility = "hidden";
     quizScreen.style.visibility =  "visible";
 })
 
-var quizScreen = document.querySelector ("#js-quiz-screen")
+var quizScreen = document.querySelector ("#js-quiz-screen");
 quizScreen.style.visibility =  "hidden";
-var questionText = document.querySelector ("#js-question-text")
-var questionChoices = document.querySelector ("#js-choices")
-questionChoices.addEventListener("click", function(){
-    console.log("answer")
- })
+var questionText = document.querySelector ("#js-question-text");
+var questionChoices = document.querySelector ("#js-choices");
+
+var f1 = document.querySelector ("#f1");
+var f2 = document.querySelector ("#f2");
+var f3 = document.querySelector ("#f3");
+var t1 = document.querySelector ("#t1");
+t1.addEventListener("click", correct);
+f1.addEventListener("click", wrong);
+f2.addEventListener("click", wrong);
+f3.addEventListener("click", wrong);
+
+function correct(){
+    console.log("answer");
+    console.log("correct");
+    return;
+}
+
+function wrong(){
+    console.log("wrong");
+    return;
+}
 
 
-
-
-var questionText = document.querySelector ("#js-question-text")
+var questionText = document.querySelector ("#js-question-text");
 
 
 // when start button is pressed question 1 appears with four buttons 
